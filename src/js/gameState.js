@@ -1,4 +1,4 @@
-function gameState() {
+function initState() {
   const state = {
     player: "Alexander",
   };
