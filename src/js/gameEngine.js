@@ -13,16 +13,14 @@ function gameLoop(state, game, timestamp) {
   modifyWizardPosition(state, game);
 
   if (state.keys.Space) {
-    game.wizardElement.style.backgroundImage =
-      "/src/images/364192802_939789033772022_8112585897119385002_n.jpg";
+    game.wizardElement.style.backgroundImage = "../src/images/wizard.png";
 
     if (timestamp > state.fireball.nextSpawnTimestamp) {
       game.createFireball(wizard, state.fireball);
       state.fireball.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
     }
   } else {
-    game.wizardElement.style.backgroundImage =
-      "/src/images/363866348_570776945073549_1660313081049969968_n.jpg";
+    game.wizardElement.style.backgroundImage = "../src/images/wizard-fire.png";
   }
 
   // Spawn bugs
